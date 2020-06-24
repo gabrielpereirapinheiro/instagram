@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, Button } from 'react-native';
+import {  View, Text, Image } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default class PhotoSection extends Component {
@@ -7,20 +7,23 @@ export default class PhotoSection extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.thumbnailSection}>
-          <Image
+          <Image 
             style={styles.thumbnail}
-            source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/CandymyloveYasu.png/440px-CandymyloveYasu.png' }} />
+            source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/CandymyloveYasu.png/440px-CandymyloveYasu.png'}} />
           <View style={styles.userContainer}>
             <Text style={styles.username}>username</Text>
           </View>
         </View>
         <View>
-          <Image
-            style={{ width: null, height: 300 }}
-            source={{ uri: 'https://assets.hongkiat.com/uploads/yummy-instagram-accounts/2-food-instagram-accounts.jpg' }} />
+          <Image 
+            style={{width: null, height: 300}}
+            source={{uri: 'https://assets.hongkiat.com/uploads/yummy-instagram-accounts/2-food-instagram-accounts.jpg'}}/>
         </View>
         <View style={styles.heartContainer}>
-
+          <Ionicons 
+            name='ios-heart-outline'
+            size={30}
+          />
         </View>
         <View style={styles.imageMeta}>
           <Text style={styles.username}>username</Text>
@@ -38,7 +41,7 @@ const styles = {
 
   thumbnailSection: {
     flexDirection: 'row',
-    padding: 5,
+    padding: 5, 
     borderBottomColor: '#ddd',
     borderBottomWidth: 1,
   },
